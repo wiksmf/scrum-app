@@ -7,6 +7,11 @@ describe('Features', () => {
     expect(screen.getByText('Everything your team needs')).toBeInTheDocument()
   })
 
+  it('renders section title as h2', () => {
+    render(<Features />)
+    expect(screen.getByRole('heading', { level: 2 })).toHaveTextContent('Everything your team needs')
+  })
+
   it('renders all six features cards', () => {
     render(<Features />)
     expect(screen.getByText('Real-time sprint board')).toBeInTheDocument()
