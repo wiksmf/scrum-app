@@ -1,0 +1,35 @@
+export const plans = [
+  {
+    name: 'Free',
+    price: '$0',
+    period: 'forever',
+    description: 'Perfect for small teams getting started with Scrum.',
+    highlighted: false,
+    features: [
+      '1 project',
+      'Up to 3 members',
+      'Backlog & sprint board',
+      'Planning poker',
+      '5 AI story generations / month',
+    ],
+    cta: 'Get started free',
+    href: '/signup',
+  },
+  {
+    name: 'Pro',
+    price: '$9',
+    period: 'per month',
+    description: 'For growing teams who need more power and flexibility.',
+    highlighted: true,
+    features: [
+      'Unlimited projects',
+      'Unlimited members',
+      'Everything in Free',
+      'Unlimited AI features',
+      'Sprint reports & velocity charts',
+      'Priority support',
+    ],
+    cta: 'Start free trial',
+    href: '/signup?plan=pro',
+  },
+]
