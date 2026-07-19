@@ -11,7 +11,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-3">
-              <Image src="/logo-scrum-app.svg" alt="ScrumAI logo" width={28} height={28} />
+              <Image src="/logo.svg" alt="ScrumAI logo" width={28} height={28} />
               <span className="font-semibold text-foreground">ScrumAI</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-2xs text-balance">

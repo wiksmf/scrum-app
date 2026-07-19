@@ -31,7 +31,7 @@ export function Navbar() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2" onClick={() => setIsOpen(false)}>
-            <Image src="/logo-scrum-app.svg" alt="ScrumAI Logo" width={32} height={32} />
+            <Image src="/logo.svg" alt="ScrumAI Logo" width={32} height={32} />
             <span className="font-semibold text-lg">ScrumAI</span>
           </Link>
 
