@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 
 import { links } from '@/lib/data/footer'
+import { ThemeToggle } from './theme-toggle'
 
 export function Footer() {
   return (
@@ -51,10 +52,9 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-border">
-          <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} ScrumAI. All rights reserved.
-          </p>
+        <div className="mt-12 pt-8 border-t border-border flex flex-col sm:flex-row items-center justify-between gap-6">
+          <p className="text-sm text-muted-foreground">© {new Date().getFullYear()} ScrumAI. All rights reserved.</p>
+          <ThemeToggle />
         </div>
       </div>
     </footer>

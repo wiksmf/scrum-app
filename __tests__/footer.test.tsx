@@ -24,4 +24,9 @@ describe('Footer', () => {
     render(<Footer />)
     expect(screen.getByText(/all rights reserved/i)).toBeInTheDocument()
   })
+
+  it('renders the theme toggle', () => {
+    render(<Footer />)
+    expect(screen.getByRole('group', { name: 'Theme selection' })).toBeInTheDocument()
+  })
 })

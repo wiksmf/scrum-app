@@ -1,6 +1,7 @@
 import { Check } from 'lucide-react'
-import { Button } from '@/components/ui/button'
 import Link from 'next/link'
+
+import { Button } from '@/components/ui/button'
 import { plans } from '@/lib/data/pricing'
 
 export function Pricing() {

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Inter } from 'next/font/google'
+import { cookies } from 'next/headers'
 import './globals.css'
 
 const geistSans = Geist({
@@ -17,13 +18,16 @@ export const metadata: Metadata = {
   description: 'AI-powered scrum planning with real-time collaboration',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const cookieStore = await cookies()
+  const theme = cookieStore.get('theme')?.value
+
   return (
-    <html lang="en" className={`${geistSans.variable} ${inter.variable} h-full antialiased`}>
+    <html lang="en" className={`${geistSans.variable} ${inter.variable} ${theme ?? ''} h-full antialiased`}>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   )
